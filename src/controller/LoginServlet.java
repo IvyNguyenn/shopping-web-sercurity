@@ -54,10 +54,7 @@ public class LoginServlet extends HttpServlet {
 		if (username.equals("") || password.equals("")) {
 			err += "Phải nhập đầy đủ thông tin!";
 		} else 
-		{
-			username = userDAO.filter(username);
-			password = userDAO.filter(password);
-			
+		{	
 			System.out.println("username: "+username);
 			if (userDAO.login(username, password) == false) {
 				err += "Tên đăng nhập hoặc mật khẩu không chính xác!";
